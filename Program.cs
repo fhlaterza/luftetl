@@ -13,14 +13,21 @@ class Program
         static void Main(string[] args)
          {
         // Carregar configurações do appsettings.json
+
         var configuration = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory) // Base do diretório do projeto
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
 
-        // Obter strings de conexão
-        var sqlConnectionString = configuration.GetConnectionString("SqlServer");
-        var postgresConnectionString = configuration.GetConnectionString("PostgreSql");
+        var sqlConnectionString = configuration.GetConnectionString("SqlServer")
+        .Replace("<SQL_PASSWORD>", Environment.GetEnvironmentVariable("SQLSERVER_PASSWORD"));
+
+        var postgresConnectionString = configuration.GetConnectionString("PostgreSql")
+        .Replace("<POSTGRES_PASSWORD>", Environment.GetEnvironmentVariable("POSTGRES_PASSWORD"));
+
+        // // Obter strings de conexão
+        // var sqlConnectionString = configuration.GetConnectionString("SqlServer");
+        // var postgresConnectionString = configuration.GetConnectionString("PostgreSql");
 
         // 1. Extração: Ler dados da base SQL
         var data = ExtractData(sqlConnectionString);
