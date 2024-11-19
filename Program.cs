@@ -10,7 +10,7 @@ using Npgsql;
 
 class Program
 { 
-        public void Main(string[] args)
+        static void Main(string[] args)
          {
         // Carregar configurações do appsettings.json
         var configuration = new ConfigurationBuilder()
