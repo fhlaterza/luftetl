@@ -7,39 +7,47 @@ using Microsoft.Extensions.Configuration;
 using Dapper;
 using luftetl.elements;
 using Npgsql;
+using DotNetEnv;
 
 class Program
 { 
         static void Main(string[] args)
          {
-        // Carregar configurações do appsettings.json
+        
+                // Carregar variáveis do arquivo .env
+                Env.Load();
+                // Construir strings de conexão usando variáveis de ambiente
+                var sqlConnectionString = $"Server={Environment.GetEnvironmentVariable("SQLSERVER_HOST")};" +
+                                        $"Database={Environment.GetEnvironmentVariable("SQLSERVER_DATABASE")};" +
+                                        $"User Id={Environment.GetEnvironmentVariable("SQLSERVER_USER")};" +
+                                        $"Password={Environment.GetEnvironmentVariable("SQLSERVER_PASSWORD")};";
 
-        var configuration = new ConfigurationBuilder()
-            .SetBasePath(AppContext.BaseDirectory) // Base do diretório do projeto
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .Build();
+                var postgresConnectionString = $"Host={Environment.GetEnvironmentVariable("POSTGRES_HOST")};" +
+                                            $"Database={Environment.GetEnvironmentVariable("POSTGRES_DATABASE")};" +
+                                            $"Username={Environment.GetEnvironmentVariable("POSTGRES_USER")};" +
+                                            $"Password={Environment.GetEnvironmentVariable("POSTGRES_PASSWORD")};";
 
-        var sqlConnectionString = configuration.GetConnectionString("SqlServer")
-        .Replace("<SQL_PASSWORD>", Environment.GetEnvironmentVariable("SQLSERVER_PASSWORD"));
+                
+                // var configuration = new ConfigurationBuilder()
+                //     .SetBasePath(AppContext.BaseDirectory) // Base do diretório do projeto
+                //     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                //     .Build();
 
-        var postgresConnectionString = configuration.GetConnectionString("PostgreSql")
-        .Replace("<POSTGRES_PASSWORD>", Environment.GetEnvironmentVariable("POSTGRES_PASSWORD"));
+                // // Obter strings de conexão
+                // var sqlConnectionString = configuration.GetConnectionString("SqlServer");
+                // var postgresConnectionString = configuration.GetConnectionString("PostgreSql");
 
-        // // Obter strings de conexão
-        // var sqlConnectionString = configuration.GetConnectionString("SqlServer");
-        // var postgresConnectionString = configuration.GetConnectionString("PostgreSql");
+                // 1. Extração: Ler dados da base SQL
+                var data = ExtractData(sqlConnectionString);
 
-        // 1. Extração: Ler dados da base SQL
-        var data = ExtractData(sqlConnectionString);
+                // 2. Transformação: Ajustar os dados (se necessário)
+                var transformedData = TransformData(data);
 
-        // 2. Transformação: Ajustar os dados (se necessário)
-        var transformedData = TransformData(data);
+                // 3. Carregamento: Gravar os dados no PostgreSQL
+                LoadData(postgresConnectionString, transformedData);
 
-        // 3. Carregamento: Gravar os dados no PostgreSQL
-        LoadData(postgresConnectionString, transformedData);
-
-        Console.WriteLine("ETL concluído com sucesso!");
-    }
+                Console.WriteLine("ETL concluído com sucesso!");
+        }   
         
    static IEnumerable<Movimento> ExtractData(string connectionString)
         {

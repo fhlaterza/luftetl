@@ -38,3 +38,5 @@ C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\obj\Debug\net8.0\luftetlC.dll
 C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\obj\Debug\net8.0\refint\luftetlC.dll
 C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\obj\Debug\net8.0\luftetlC.pdb
 C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\obj\Debug\net8.0\ref\luftetlC.dll
+C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\fhlat\OneDrive\Luft\Dev\luftetl\bin\Debug\net8.0\Sprache.dll

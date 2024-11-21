@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {}
+    "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {
+    "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
+        "projectUniqueName": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
         "projectName": "luftetlC",
-        "projectPath": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
+        "projectPath": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
         "packagesPath": "C:\\Users\\fhlat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\obj\\",
+        "outputPath": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fhlat\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,6 +62,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "dotnetenv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             },
             "system.data.sqlclient": {
               "target": "Package",
