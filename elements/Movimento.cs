@@ -17,12 +17,12 @@ namespace luftetl.elements
     public string Ds_Cliente { get; set; }
     public string CidFilial { get; set; }
     public DateTime Emissao { get; set; }
-    public bool Faturado { get; set; }
+    public string Faturado { get; set; }
     public string CnpjFaturado { get; set; }
     public string RaizFaturado { get; set; }
     public string Ds_Cidade { get; set; }
     public string Ds_Estado { get; set; }
-    public string Ds_Entrega { get; set; }
+    public DateTime Entrega { get; set; }
     public decimal PesoCubado { get; set; }
     public decimal PesoReal { get; set; }
     public decimal VlrMercadoria { get; set; }

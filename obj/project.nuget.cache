@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tIkSJ0L8o/U=",
+  "dgSpecHash": "VDNP2oIlwqA=",
   "success": true,
-  "projectFilePath": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
+  "projectFilePath": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fhlat\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\fhlat\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",

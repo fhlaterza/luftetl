@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {}
+    "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {}
   },
   "projects": {
-    "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {
+    "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
+        "projectUniqueName": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
         "projectName": "luftetlC",
-        "projectPath": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
+        "projectPath": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\luftetl.csproj",
         "packagesPath": "C:\\Users\\fhlat\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\obj\\",
+        "outputPath": "C:\\Users\\fhlat\\OneDrive\\Luft\\Dev\\luftetl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fhlat\\AppData\\Roaming\\NuGet\\NuGet.Config"
