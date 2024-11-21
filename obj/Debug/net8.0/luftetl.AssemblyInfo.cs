@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("luftetlC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce44ea73a3c71444a60884e3ebca7f22eabee8a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae4353ed0848d9cb0f18bb8a141650a761bea990")]
 [assembly: System.Reflection.AssemblyProductAttribute("luftetlC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("luftetlC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

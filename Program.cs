@@ -21,7 +21,7 @@ class Program
                     .SetBasePath(AppContext.BaseDirectory) // Base do diretório do projeto
                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                     .Build();
-                var executionIntervalMinutes = int.Parse(configuration["AppSettings:ExecutionIntervalMinutes"]);
+                var executionIntervalMinutes = int.Parse(configuration["AppSettings:ExecutionIntervalMinutes"]); 
                 var periodSelection = int.Parse(configuration["AppSettings:PeriodSelection"]);
 
                 Env.Load();
@@ -50,12 +50,15 @@ class Program
                     {
                         // 1. Extração: Ler dados da base SQL
                         var data = ExtractData(sqlConnectionString, periodSelection);
+                        Console.WriteLine("Buscando Dados no SQL...");
 
                         // 2. Transformação: Ajustar os dados (se necessário)
                         var transformedData = TransformData(data);
+                        Console.WriteLine("Atualizando Informações...");
 
                         // 3. Carregamento: Gravar os dados no PostgreSQL
                         LoadData(postgresConnectionString, transformedData, periodSelection);
+                        Console.WriteLine("Gravando Dados no PostgreSQL...");
 
                         var endTime = DateTime.Now;
                         LogExecutionTime("Término", endTime);
